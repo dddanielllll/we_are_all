@@ -1,0 +1,23 @@
+:root{--bg:#f8fafc;--card:#fff;--accent:#2b7a78;--muted:#6b7280}
+*{box-sizing:border-box}
+body{font-family:Inter,system-ui,Arial,Helvetica,sans-serif;margin:0;background:linear-gradient(#f0fbff,#f7fbf9);color:#052a2a}
+.container{max-width:1000px;margin:28px auto;display:grid;grid-template-columns:1fr 260px;gap:18px;padding:18px}
+header{grid-column:1/-1}
+h1{margin:0;font-size:28px}
+.subtitle{margin:4px 0 12px;color:var(--muted)}
+main{background:var(--card);padding:16px;border-radius:10px;box-shadow:0 6px 18px rgba(10,20,30,.06)}
+.panel{padding:8px}
+.hidden{display:none}
+.controls{margin-top:12px}
+button{background:var(--accent);color:#fff;border:0;padding:10px 12px;border-radius:8px;cursor:pointer}
+button.secondary{background:#dbefea;color:#064; border:0}
+.scoreboard{background:#fff;padding:14px;border-radius:10px;height:fit-content;box-shadow:0 6px 18px rgba(10,20,30,.04)}
+.minigame{display:flex;gap:12px;align-items:flex-start}
+.actions,.targets{flex:1;padding:8px;border-radius:8px;border:1px dashed #dbeaea;min-height:140px}
+.actionItem{background:#eef7f6;padding:8px;margin:8px;border-radius:8px;cursor:grab}
+.target{background:#fff;padding:8px;margin:8px;border-radius:8px;min-height:40px}
+.steps{list-style:none;padding:0;margin:8px 0}
+.steps li{background:#fff;padding:10px;margin:6px;border-radius:8px;border:1px solid #eef6f6;cursor:grab}
+.result{margin-top:10px;font-weight:600}
+.small{font-size:12px;color:var(--muted);margin-top:8px}
+@media(max-width:900px){.container{grid-template-columns:1fr}}

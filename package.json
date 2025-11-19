@@ -1,12 +1,10 @@
 {
-  "name": "weareallone-minimal",
+  "name": "weareallone-game",
   "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "vercel dev --listen 3000",
     "start": "vercel start"
   },
-  "dependencies": {
-    "sirv-cli": "^1.0.0"
-  }
+  "dependencies": {}
 }
