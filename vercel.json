@@ -1,6 +1,5 @@
 {
   "version": 2,
-  "name": "we-are-all-one",
   "builds": [
     { "src": "index.html", "use": "@vercel/static" }
   ],
