@@ -1,36 +1,35 @@
-const steps = [
-  "Bienvenido al juego contra la discriminación.",
-  "Cada decisión afecta a las personas a tu alrededor.",
-  "Ayuda a crear un mundo más justo.",
-  "Todos merecemos respeto.",
-  "¡Gracias por jugar!"
+const text = [
+  "Bienvenido al juego educativo contra la discriminación.",
+  "Aprenderás cómo las acciones pequeñas generan un impacto grande.",
+  "Todas las personas merecen respeto y trato justo.",
+  "¡Juntos podemos crear un mundo más igualitario!",
+  "Has completado el juego. ¡Gracias por jugar!"
 ];
 
-let current = 0;
+let index = 0;
 
-const content = document.getElementById("content");
-const progressBar = document.getElementById("progress-bar");
+const gameText = document.getElementById("game-text");
 const nextBtn = document.getElementById("next-btn");
+const progressBar = document.getElementById("progress-bar");
 
-function updateUI() {
-  content.textContent = steps[current];
+function updateGame() {
+  gameText.textContent = text[index];
 
-  const pct = ((current + 1) / steps.length) * 100;
-  progressBar.style.width = pct + "%";
+  const percent = Math.floor((index / (text.length - 1)) * 100);
+  progressBar.style.width = percent + "%";
 
-  if (current === steps.length - 1) {
-    nextBtn.textContent = "Finalizar";
+  if (index === text.length - 1) {
+    nextBtn.textContent = "Reiniciar";
   }
 }
 
 nextBtn.addEventListener("click", () => {
-  if (current < steps.length - 1) {
-    current++;
-    updateUI();
+  if (index < text.length - 1) {
+    index++;
   } else {
-    content.innerHTML = "✨ Has completado la experiencia ✨";
-    nextBtn.style.display = "none";
+    index = 0;
   }
+  updateGame();
 });
 
-updateUI();
+updateGame();
